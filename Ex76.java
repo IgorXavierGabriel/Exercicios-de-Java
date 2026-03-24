@@ -1,10 +1,9 @@
 import java.util.Scanner;
 
-public class AgendaPessoal {
+public class Ex76 {
     public static void main(String[] args) {
         Scanner scan = new Scanner(System.in);
 
-        // Matriz: 31 dias (linhas) por 24 horas (colunas)
         String[][] agenda = new String[31][24];
         
         int opcao;
@@ -18,19 +17,19 @@ public class AgendaPessoal {
             System.out.print("Escolha uma opção: ");
             opcao = scan.nextInt();
 
-            if (opcao == 1) { // Adicionar
+            if (opcao == 1) { 
                 System.out.print("Digite o dia (1-31): ");
                 int dia = scan.nextInt();
                 System.out.print("Digite a hora (0-23): ");
                 int hora = scan.nextInt();
                 
-                scan.nextLine(); // Limpar o buffer
+                scan.nextLine(); 
                 System.out.print("Digite o compromisso: ");
                 agenda[dia - 1][hora] = scan.nextLine();
                 
                 System.out.println("Compromisso agendado com sucesso!");
 
-            } else if (opcao == 2) { // Consultar
+            } else if (opcao == 2) { 
                 System.out.print("Digite o dia (1-31): ");
                 int dia = scan.nextInt();
                 System.out.print("Digite a hora (0-23): ");
